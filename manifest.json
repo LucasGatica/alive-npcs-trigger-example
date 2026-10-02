@@ -1,0 +1,12 @@
+{
+  "Name": "[AT] AliveNpcs - Example Triggers",
+  "Author": "Lucas Gatica",
+  "Version": "1.0.0",
+  "Description": "Example AliveTrigger pack for AliveNpcs: villagers react to new situations defined in a single JSON file.",
+  "UniqueID": "Lucas.AliveNpcs.AT.ExampleTriggers",
+  "ContentPackFor": {
+    "UniqueID": "Lucas.AliveNpcs",
+    "MinimumVersion": "1.7.0"
+  },
+  "UpdateKeys": []
+}

@@ -1,0 +1,56 @@
+{
+  "Format": 1,
+  "Triggers": [
+    {
+      "Id": "caught_in_the_rain",
+      "When": "WEATHER Here Rain Storm, LOCATION_IS_OUTDOORS Here",
+      "RangeTiles": 6,
+      "MinHearts": 2,
+      "Summary": "{farmer} was walking around {location} in the pouring rain, completely soaked.",
+      "Reaction": "Tease {farmer} a little about being out in this weather, then show you care.",
+      "MaxPerDay": 1
+    },
+    {
+      "Id": "out_after_midnight",
+      "When": "TIME 2400",
+      "RangeTiles": 8,
+      "MinHearts": 4,
+      "Importance": 6,
+      "Summary": "{farmer} was still out and about after midnight, looking like they should be in bed.",
+      "Reaction": "You are a little worried. Tell {farmer} to get some rest, and hand them a coffee for the walk home.",
+      "GiveItem": "(O)395",
+      "MaxPerDay": 1
+    },
+    {
+      "Id": "carrying_prismatic_shard",
+      "When": "PLAYER_HAS_ITEM Current (O)74",
+      "RangeTiles": 4,
+      "Npcs": [ "Clint", "Maru", "Demetrius", "Wizard", "Abigail" ],
+      "Importance": 7,
+      "Summary": "{farmer} walked past {npc} carrying a prismatic shard, glowing in every color.",
+      "Reaction": "You cannot hide your fascination with the prismatic shard. Ask where they found it.",
+      "MaxPerDay": 1
+    },
+    {
+      "Id": "hated_gift",
+      "On": "gift",
+      "Match": { "taste": "hated" },
+      "Reaction": "You are openly offended by this gift. Ask {farmer} what they were thinking.",
+      "MaxPerDay": 3
+    },
+    {
+      "Id": "beer_run_at_the_saloon",
+      "On": "purchase",
+      "Match": { "itemIds": "(O)346", "subject": "Gus" },
+      "Summary": "{farmer} stocked up on beer at the Stardrop Saloon.",
+      "MaxPerDay": 1
+    },
+    {
+      "Id": "struck_with_a_weapon",
+      "On": "tool_hit",
+      "Match": { "weapon": "true" },
+      "Reaction": "You were just struck with a real weapon. You are scared and furious: demand an explanation and an apology from {farmer}.",
+      "MaxPerDay": 2
+    }
+  ]
+}
